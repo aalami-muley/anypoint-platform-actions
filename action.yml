@@ -1,0 +1,12 @@
+name: "Provision Anypoint Control Plane"
+description: "Provision Anypoint Control plane given a configuration manifest"
+author: "Ahmed ALAMI"
+
+inputs:
+  MANIFEST_PATH:
+    description: "The manifest path"
+    required: true
+
+runs:
+  using: "node16"
+  main: "dist/index.js"

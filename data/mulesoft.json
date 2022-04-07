@@ -1,0 +1,103 @@
+{
+    "access-management": {
+        "identity-providers": [
+            {
+                "profile": "azure",
+                "name": "AD SAML Identity Manager",
+                "saml": {
+                    "issuer": "https://sts.windows.net/deff24bb-2089-4400-8c8e-f71e680378b2/",
+                    "audience": "kpmg-fr.anypoint.mulesoft.com",
+                    "public_key": [
+                        "MIIC8DCCAdigAwIBAgIQVdfpkLH3SIRC5VWo29rBFjANBgkqhkiG9w0BAQsFADA0MTIwMAYDVQQDEylNaWNyb3NvZnQgQXp1cmUgRmVkZXJhdGVkIFNTTyBDZXJ0aWZpY2F0ZTAeFw0yMjAzMTYxMzE2MDlaFw0yNTAzMTYxMzE2MDlaMDQxMjAwBgNVBAMTKU1pY3Jvc29mdCBBenVyZSBGZWRlcmF0ZWQgU1NPIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqfYXPweDbmo9mDRgEMrMZI2IHcWxL83OmLuWzsUMOgKTSq1dQ/51i0v0VAWU2QNwgRv53yV6MykihCvXH7bzNlDLmf1nmiI9bHI+VnXWN8xJGbQAMhrtsz9c2gUPw1VvZisnKOT+5qehaCrTCuIv4p0AgUge8g+sgpg2PtUXz3SFR07K8XXxC2JYPtGhUgAv2rr9zpHC0eRtrE63hanTfvRq5ovGzbF6ucZ3EkhhHtODYtvXTdopWEb86mXlbHL0JsuWCbR69tUqHY+1O3hD1PkoqtkfX19uX5+M1oH6nqTM7rWXKNrtNT4Cy66IZ5butMCBdjIRgmvz/Yw3tce6nQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBjitx3u0OlXLlqnEfYrQfFh203q4UaCaY58nvdZWlCscRJkO3vzkB1G94b+xLS9dmWZc1+USy/G2zcWDt5Z7rDfg5pGLpatkh3yRSwdm5xgius5OZA3KfIyOX/dflaSpE03jveaow90GGYYDXijSP3ZdxEyN2dLIT/Zw8d989edjqG/LFVT8rFIN0tBdDe+zZ6dxVqiUs3cBY8Qmae2JUJmSXJVmfcWeFvg6QKF9Gphv7qhERJLrtE+rg9y8UajM/JrM2MXk7xzoRxbfT3T4775C8/xbibRWmn87El5P0X+uXG2ONqRz3l9FoPBpzrXAhyKuFv7PYf+v3RXZ6Y3EHj"
+                    ]
+                }
+            }
+        ],
+        "connected-apps": [
+            {
+                "client_name": "MyConnectedApp",
+                "grant_types": [
+                    "authorization_code"
+                ],
+                "redirect_uris": [
+                    "https://google.com"
+                ],
+                "scopes": [
+                    "edit:design_center"
+                ],
+                "public_keys": [],
+                "client_uri": "https://google.com",
+                "audience": "internal"
+            }
+        ],
+        "client-providers": [],
+        "teams": [
+            {
+                "name": "Administrator",
+                "roles": [
+                    "Organization Administrator",
+                    "Audit Log Viewer",
+                    "Exchange Administrator",
+                    "API Group Administrator",
+                    "API Creator",
+                    "API Versions Owner",
+                    "Portals Viewer",
+                    "Cloudhub Network Administrator",
+                    "Cloudhub Network Viewer",
+                    "Manage Runtime Fabrics",
+                    "Monitoring Administrator"
+                ]
+            }
+        ],
+        "business-groups": [
+            {
+                "ownerId": "612cf2dd-9f92-4a08-97ed-f6be4faf06ca",
+                "name": "Test",
+                "environments": [
+                    {
+                        "name": "Design1",
+                        "type": "design"
+                    },
+                    {
+                        "name": "Sandbox1",
+                        "type": "sandbox"
+                    },
+                    {
+                        "name": "Production1",
+                        "type": "production"
+                    }
+                ],
+                "teams": [
+                    {
+                        "name": "Administrator",
+                        "roles": [
+                            "Organization Administrator",
+                            "Audit Log Viewer",
+                            "Exchange Administrator",
+                            "API Group Administrator",
+                            "API Creator",
+                            "API Versions Owner",
+                            "Portals Viewer",
+                            "Cloudhub Network Administrator",
+                            "Cloudhub Network Viewer",
+                            "Manage Runtime Fabrics",
+                            "Monitoring Administrator"
+                        ]
+                    }
+                ]
+            }
+        ],
+        "mappings": [
+            {
+                "provider": "AD SAML Identity Manager",
+                "mappings": [
+                    {
+                        "team": "Administrator",
+                        "group": "Administrator",
+                        "objectId": "e4213008-5296-4b3b-9084-8744b4ad7ed2"
+                    }
+                ]
+            }
+        ]
+    }
+}
